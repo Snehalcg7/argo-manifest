@@ -1,18 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app
-  namespace: argocd  
+  name: application
+  namespace: argocd
 spec:
   destination:
-    namespace: default  
-    server: https://kubernetes.default.svc  
+    namespace: default
+    server: https://kubernetes.default.svc
   source:
-    repoURL: 'https://github.com/Snehalcg7/kubernetesfiles'  
-    targetRevision: master  
-    path: 'files'  
+    repoURL: "https://github.com/Snehalcg7/kubernetesfiles"
+    targetRevision: master
+    path: "files"
   syncPolicy:
     automated:
-      prune: true  
-      selfHeal: true  
-
+      prune: true
+      selfHeal: true
