@@ -9,9 +9,9 @@ spec:
     namespace: default
     server: https://kubernetes.default.svc
   source:
-    repoURL: "https://github.com/Snehalcg7/argocd"
-    targetRevision: HEAD
-    path: "application-files"
+    repoURL: "https://github.com/Snehalcg7/kubernetesfiles"
+    targetRevision: master
+    path: "files"
   syncPolicy:
     automated:
       prune: true
